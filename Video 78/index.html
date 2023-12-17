@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Simulator</title>
+    <style>
+
+
+        body {
+            background-color: green;
+            color: white;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function simulateHacking(message, delay) {
+            setTimeout(function () {
+                document.body.innerHTML += '<p class="blink">' + message + '</p>';
+            }, delay);
+        }
+
+        simulateHacking("Initializing Hacking ..", 1000);
+        simulateHacking("Reading your Files...", 3000);
+        simulateHacking("Password files detected...", 5000);
+        simulateHacking("Sending all passwords and personal files to server...", 7000);
+        simulateHacking("Cleaning up ..", 7000);
+    </script>
+</body>
+</html>
